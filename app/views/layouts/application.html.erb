@@ -7,8 +7,29 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+    <div id="wrapper">
+        <div id="container">
 
-<%= yield %>
+            <!-------------------------------- HEADER -------------------------------->
+            <header>
+                <section id="page-title">
+                    <a href="/home/index"><%= image_tag "logo.png", size: "252x58", alt: "ozwebstarter" %></a>
+                </section> <!-- id: page-title -->
+                <nav id="top">
+                    <a href="">Home</a>
+                    <a href="">About</a>
+                    <a href="">Contact</a>
+                    <button id="quote">Free Quote</button>
+                </nav> <!-- id: top -->
+            </header>
 
+            <!-------------------------------- PAGE SPECIFIC CONTENT RENDERED -------------------------------->
+
+            <%= yield %>
+
+            <!-------------------------------- FOOTER -------------------------------->
+
+        </div> <!-- id: container -->
+    </div> <!-- id: wrapper -->
 </body>
 </html>

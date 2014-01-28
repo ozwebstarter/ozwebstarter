@@ -1,3 +1,33 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+div#container {
+  @include outer-container;
+  header {
+    @include span-columns(10);
+    section#page-title {
+      @include span-columns(5);
+      padding-top: 20px
+    }
+    nav#top {
+      @include span-columns(5);
+      padding-top: 18px;
+      text-align: right;
+      a {
+        padding-right: 30px;
+      }
+      a:link, a:visited, a:active {
+        text-decoration: none;
+        font: normal 12px/1.2em Arial, Helvetica, sans-serif;
+        color: #666666;
+      }
+      a:hover {
+        color: #666666;
+      }
+      button#quote {
+        @include button(simple, #679F34);
+      }
+    }
+  }
+}
