@@ -1,35 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ozwebstarter</title>
+  <title>ozwebstarter</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-    <div id="wrapper">
-        <div id="container">
+    <div id="outer-wrapper">
+        <div id="inner-wrapper">
+            <div id="container">
 
-            <!-------------------------------- HEADER -------------------------------->
-            <header>
-                <section id="page-title">
-                    <a href="/home/index"><%= image_tag "logo.png", size: "252x58", alt: "ozwebstarter" %></a>
-                </section> <!-- id: page-title -->
-                <nav id="top">
-                    <a href="">Home</a>
-                    <a href="">About</a>
-                    <a href="">Contact</a>
-                    <button id="quote">Free Quote</button>
-                </nav> <!-- id: top -->
-            </header>
+                <!-------------------------------- HEADER -------------------------------->
 
-            <!-------------------------------- PAGE SPECIFIC CONTENT RENDERED -------------------------------->
+                <header>
+                    <section id="page-title">
+                        <a href="/home/index"><%= image_tag "logo/ozwebstarter-logo.png", size: "300x80", alt: "ozwebstarter" %></a>
+                    </section> <!-- id: page-title -->
+                    <section id="social">
+                        <%= image_tag "social-counters.png", size: "180x65", alt: "Social Counters" %>
+                    </section> <!-- id: top -->
+                </header>
 
-            <%= yield %>
+                <!-------------------------------- PAGE SPECIFIC CONTENT RENDERED -------------------------------->
 
-            <!-------------------------------- FOOTER -------------------------------->
+                <%= yield %>
 
-        </div> <!-- id: container -->
-    </div> <!-- id: wrapper -->
+                <!-------------------------------- FOOTER -------------------------------->
+
+                <footer>
+                    <span>ozwebstarter &copy; 2014</span>
+                    <ul>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">FAQ</a></li>
+                        <li><a href="">Sitemap</a></li>
+                        <li><a href="">Privacy</a></li>
+                        <li><a href="">Terms & Conditions</a></li>
+                    </ul>
+                </footer>
+
+            </div> <!-- id: container -->
+        </div> <!-- id: inner-wrapper -->
+    </div> <!-- id: outer-wrapper -->
 </body>
 </html>
